@@ -1,0 +1,47 @@
+.grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; }
+.form-page-container { display: flex; justify-content: center; align-items: center; min-height: 70vh; }
+.form-wrapper { width: 100%; max-width: 450px; }
+.styled-form { display: flex; flex-direction: column; gap: 20px; }
+.form-group { display: flex; flex-direction: column; }
+.form-group label { margin-bottom: 8px; font-weight: 600; }
+.styled-form input, .styled-form select {
+  padding: 12px; border: none; border-radius: 6px; font-size: 1rem;
+  background: rgba(255, 255, 255, 0.1); color: #fff;
+  border: 1px solid transparent; transition: var(--transition);
+}
+.styled-form input:focus, .styled-form select:focus { outline: none; border-color: #00ffff; }
+.styled-form input::placeholder { color: #ccc; }
+.form-row { display: flex; gap: 20px; }
+.form-row .form-group { flex: 1; }
+.neon-button {
+  background: linear-gradient(135deg, #6a11cb, #2575fc); color: white; border: none;
+  padding: 12px 20px; border-radius: 10px; font-weight: 700; font-size: 1rem;
+  box-shadow: 0 0 10px #2575fc, 0 0 20px #6a11cb; transition: 0.3s ease; cursor: pointer;
+}
+.neon-button:hover { transform: translateY(-2px); box-shadow: 0 0 15px #6a11cb, 0 0 30px #2575fc; }
+.auth-buttons { display: flex; gap: 15px; margin-top: 10px; }
+.auth-buttons .neon-button { flex: 1; }
+.form-page-container p { margin-top: 15px; text-align: center; }
+.form-page-container p a { color: #00ffff; font-weight: bold; }
+.live-watch-page { display: grid; grid-template-columns: 3fr 2fr; gap: 30px; align-items: flex-start; }
+.video-player-wrapper { background-color: #000; border-radius: var(--border-radius); overflow: hidden; }
+.video-placeholder {
+    width: 100%; aspect-ratio: 16 / 9; background: #111;
+    display: flex; justify-content: center; align-items: center;
+    flex-direction: column; gap: 15px; color: #555;
+}
+.video-placeholder svg { width: 80px; height: 80px; }
+.live-data-wrapper .live-scorecard-bgmi { height: 100%; }
+.game-page-header {
+    text-align: center; padding: 40px 20px; margin-bottom: 30px;
+    border-radius: var(--border-radius);
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://wallpaperaccess.com/full/9411728.jpg') center/cover;
+}
+.game-page-header h1 { font-size: 3rem; color: #00ffff; }
+
+@media (max-width: 1024px) {
+    .live-watch-page { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+    .form-row { flex-direction: column; }
+}
